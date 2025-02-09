@@ -6,11 +6,7 @@ export interface CanvasProps extends HTMLAttributes<HTMLCanvasElement>  {
     draw: (context: CanvasRenderingContext2D) => void
 }
 
-export interface CanvasContextValue {
-
-}
-
-export const CanvasContext = createContext<CanvasContextValue>({})
+export const CanvasContext = createContext({})
 
 const Canvas = forwardRef<HTMLCanvasElement, CanvasProps>(({className, draw, height, width, ...props}, ref) => {
     const refCanvas = useRef<HTMLCanvasElement | null>(null);
