@@ -1,3 +1,3 @@
-import SettingHerro from './setting-herro' 
+import SettingHerro from './setting-herro'
 
 export default SettingHerro

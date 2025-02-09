@@ -11,7 +11,7 @@ CreateComponentFile({
         name: 'component',
         path: {
             defult: folders[0],
-            cdheked: (value) => folders.includes(value)
+            cdheked: (value) => folders.includes(value),
         },
         isStyle: 'true',
     },
@@ -33,5 +33,5 @@ CreateComponentFile({
             },
             content: () => contentStyleModule(),
         },
-    ]
+    ],
 })

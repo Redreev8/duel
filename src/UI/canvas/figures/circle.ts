@@ -1,24 +1,22 @@
-type PropsCircle = {
+export type PropsCircle = {
+    radius: number
     context: CanvasRenderingContext2D
-    width: number
-    height?: number
-    x?: number
-    y?: number
+    centerX?: number
+    centerY?: number
     fillStyle?: string
     strokeStyle?: string
 }
 
 export default ({
-    context,
-    x = 0,
-    y = 0,
-    width,
-    height = width,
+    radius,
+    centerX = radius,
+    centerY = radius,
     fillStyle,
     strokeStyle,
+    context,
 }: PropsCircle) => {
     context.beginPath()
-    context.rect(x, y, width, height)
+    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false)
     if (fillStyle) {
         context.fillStyle = fillStyle
         context.fill()

@@ -1,4 +1,4 @@
 export type Position = {
-    x: number,
+    x: number
     y: number
 }
